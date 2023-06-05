@@ -12,7 +12,7 @@ const TopLosers = () => {
       <CustomCard
         header={
           <div className="d-flex justify-content-between align-items-center">
-            <h3 className="mx-3">Top Gainers</h3>
+            <h3 className="mx-3">Top Losers</h3>
 
             <Form.Check
               type="switch"
