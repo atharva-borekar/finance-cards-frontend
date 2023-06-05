@@ -1,38 +1,31 @@
-.App {
-  text-align: center;
+.card-custom {
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-custom-img {
+  height: 4rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-color: inherit;
+  background-image: url(http://res.cloudinary.com/d3/image/upload/c_scale,q_auto:good,w_1110/trianglify-v1-cs85g_cc5d2i.jpg);
+  padding-left: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.custom-card-body {
+  overflow-y: auto;
+  overflow-x: none;
+  max-height: 24rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.custom-card-footer {
+  margin: 0.5rem;
+  max-height: 16rem;
+  min-height: max-content;
+  overflow-y: auto;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::-webkit-scrollbar {
+  width: 2px;
 }

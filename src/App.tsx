@@ -1,25 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { toast } from "react-toastify";
+import { Col, Container, Row } from "react-bootstrap";
+
+import StockSearch from "./components/StockSearch";
+import MarketAction from "components/MarketAction";
+import TopGainers from "components/Stocks/TopGainers";
+import TopLosers from "components/Stocks/TopLosers";
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      onError: (err: any) => {
+        toast.error(err);
+      },
+    },
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <Container>
+        <Row>
+          <Col>
+            <StockSearch />
+          </Col>
+          <Col>
+            <MarketAction />
+          </Col>
+          <Col>
+            <TopGainers />
+          </Col>
+          <Col>
+            <TopLosers />
+          </Col>
+        </Row>
+      </Container>
+    </QueryClientProvider>
   );
 }
 
