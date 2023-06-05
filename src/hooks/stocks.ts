@@ -41,17 +41,27 @@ export const useStockDetails = (selectedStock: string) => {
 };
 
 export const useMarketAction = () => {
-  return useQuery(["marketAction"], () => getMarketAction());
+  return useQuery(["marketAction"], () => getMarketAction(), {
+    refetchInterval: 10000,
+  });
 };
 
 export const useTopGainers = (selectedMarket = "nifty") => {
-  return useQuery(["topGainers", selectedMarket], () =>
-    getTopGainers(selectedMarket)
+  return useQuery(
+    ["topGainers", selectedMarket],
+    () => getTopGainers(selectedMarket),
+    {
+      refetchInterval: 10000,
+    }
   );
 };
 
 export const useTopLosers = (selectedMarket = "nifty") => {
-  return useQuery(["topLosers", selectedMarket], () =>
-    getTopLosers(selectedMarket)
+  return useQuery(
+    ["topLosers", selectedMarket],
+    () => getTopLosers(selectedMarket),
+    {
+      refetchInterval: 10000,
+    }
   );
 };

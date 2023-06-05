@@ -30,7 +30,7 @@ export const getTopGainers = (selectedMarket: string) => {
   });
 };
 export const getTopLosers = (selectedMarket: string) => {
-  return getApi<null, any>(`http://localhost:8000/finance/top_gainers`, {
+  return getApi<null, any>(`http://localhost:8000/finance/top_losers`, {
     market: selectedMarket,
   });
 };
