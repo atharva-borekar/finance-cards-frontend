@@ -4,7 +4,7 @@
 }
 
 .card-custom-img {
-  height: 4rem;
+  height: max-content;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

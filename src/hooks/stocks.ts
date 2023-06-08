@@ -36,6 +36,7 @@ export const useStockDetails = (selectedStock: string) => {
     () => getStockDetails(selectedStock),
     {
       select: (res: any) => res.data,
+      enabled: Boolean(selectedStock),
     }
   );
 };

@@ -1,4 +1,3 @@
-import axios from "axios";
 import { getApi } from "../api/apiHelper";
 
 export const getStockQuerySuggestions = (searchQuery: string) => {
