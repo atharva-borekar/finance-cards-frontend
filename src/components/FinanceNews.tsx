@@ -47,7 +47,7 @@ const FinanceNews = () => {
         <Card key={article.url} className="m-1 bg-dark text-light">
           <Card.Body>
             <Row>
-              <Col sm={3}>
+              <Col sm={12} lg={3}>
                 <div>
                   <img
                     alt="news"
