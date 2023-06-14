@@ -8,6 +8,8 @@ import MarketAction from "components/MarketAction";
 import TopGainers from "components/Stocks/TopGainers";
 import TopLosers from "components/Stocks/TopLosers";
 import FinanceNews from "components/FinanceNews";
+import CommodityTopGainers from "components/Commodities/TopCommodityGainers";
+import CommodityTopLosers from "components/Commodities/TopCommodityLosers";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -36,8 +38,19 @@ function App() {
           <Col>
             <TopLosers />
           </Col>
+        </Row>
+        <Row>
           <Col>
             <FinanceNews />
+          </Col>
+        </Row>
+        <Row>
+          <h1>Commodities</h1>
+          <Col>
+            <CommodityTopGainers />
+          </Col>
+          <Col>
+            <CommodityTopLosers />
           </Col>
         </Row>
       </Container>

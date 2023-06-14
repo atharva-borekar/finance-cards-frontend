@@ -1,5 +1,7 @@
 import { useQuery } from "react-query";
 import {
+  getCommodityTopGainers,
+  getCommodityTopLosers,
   getMarketAction,
   getStockDetails,
   getStockQuerySuggestions,
@@ -65,4 +67,16 @@ export const useTopLosers = (selectedMarket = "nifty") => {
       refetchInterval: 10000,
     }
   );
+};
+
+export const useCommodityTopGainers = () => {
+  return useQuery(["commodityTopGainers"], getCommodityTopGainers, {
+    // refetchInterval: 10000, //uncomment if need to fetch periodically
+  });
+};
+
+export const useCommodityTopLosers = () => {
+  return useQuery(["commodityTopLosers"], () => getCommodityTopLosers(), {
+    // refetchInterval: 10000, //uncomment if need to fetch periodically
+  });
 };

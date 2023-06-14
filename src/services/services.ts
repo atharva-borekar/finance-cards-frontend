@@ -33,3 +33,14 @@ export const getTopLosers = (selectedMarket: string) => {
     market: selectedMarket,
   });
 };
+
+export const getCommodityTopGainers = () => {
+  return getApi<null, any>(
+    `http://localhost:8000/finance/commodities/top_gainers`
+  );
+};
+export const getCommodityTopLosers = () => {
+  return getApi<null, any>(
+    `http://localhost:8000/finance/commodities/top_losers`
+  );
+};
